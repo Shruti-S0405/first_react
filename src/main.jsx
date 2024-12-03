@@ -1,14 +1,25 @@
-import { Fragment } from "react"
+// import { Fragment } from "react"
 import { createRoot } from "react-dom/client"
+
+import HeaderComponent from "./Header"
+import MainComponent from "./Content"
+import FooterComponent from "./Footer"
 
 const root = createRoot(document.getElementById("root"))
 console.log(<h1>Hello, World!</h1>)
 root.render(
-  // <TemporaryComponent />
-  // <PageComponent/>
-  <NewComponent />
+  <Page />
 )
 
+function Page(){
+  return (
+    <>
+      <HeaderComponent/>
+      <MainComponent/>
+      <FooterComponent/>
+    </>
+  )
+}
 //Fragments
 // if we use div to wrap then in html it will be like
 // div id root 
@@ -18,56 +29,19 @@ root.render(
 //by using fragment this thing is not there only div id root then all the content
 // Used to wrap all the elements to one parent element that can be rendered
 
-function HeaderComponent(){
-  return(
-    <header className="header">
-      <img src="src/assets/react-logo.png" width="40px" alt="react-logo" />
-      <nav>
-        <ul className="nav-class">
-          <li className="nav-class-item">Pricing</li>
-          <li className="nav-class-item">About</li>
-          <li className="nav-class-item">Contact</li>
-        </ul>
-      </nav>
-    </header>
-  )
-}
 
-function MainComponent(){
-  return(
-    <main>
-      <h1>Reasons I'm excited to learn React? </h1>
-      <ul>
-        <li>The most popular Javascript Library</li>
-        <li>I am more likely to get a job as a front end developer
-        if I know Reac</li>
-        <li>It is declarative and composable</li>
-        <li>It is cool and crazy</li>
-      </ul>
-    </main>
-  )
-}
-
-function FooterComponent(){
-  return(
-    <footer>
-    © 2024 Zephyra Developed. All rights reserved. 
-    </footer>
-  )
-}
-
-function NewComponent(){
-  return (
-    // <Fragment>
-    //without fragments just <></> also works
-    <> 
-      <HeaderComponent/>
-      <MainComponent/>
-      <FooterComponent/>
-    </>
-    // </Fragment> 
-  )
-}
+// function NewComponent(){
+//   return (
+//     // <Fragment>
+//     //without fragments just <></> also works
+//     <> 
+//       <HeaderComponent/>
+//       <MainComponent/>
+//       <FooterComponent/>
+//     </>
+//     // </Fragment> 
+//   )
+// }
 
 // function PageComponent(){
 //   return (
