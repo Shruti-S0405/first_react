@@ -17,29 +17,53 @@ root.render(
 
 //by using fragment this thing is not there only div id root then all the content
 // Used to wrap all the elements to one parent element that can be rendered
+
+function HeaderComponent(){
+  return(
+    <header className="header">
+      <img src="src/assets/react-logo.png" width="40px" alt="react-logo" />
+      <nav>
+        <ul className="nav-class">
+          <li className="nav-class-item">Pricing</li>
+          <li className="nav-class-item">About</li>
+          <li className="nav-class-item">Contact</li>
+        </ul>
+      </nav>
+    </header>
+  )
+}
+
+function MainComponent(){
+  return(
+    <main>
+      <h1>Reasons I'm excited to learn React? </h1>
+      <ul>
+        <li>The most popular Javascript Library</li>
+        <li>I am more likely to get a job as a front end developer
+        if I know Reac</li>
+        <li>It is declarative and composable</li>
+        <li>It is cool and crazy</li>
+      </ul>
+    </main>
+  )
+}
+
+function FooterComponent(){
+  return(
+    <footer>
+    © 2024 Zephyra Developed. All rights reserved. 
+    </footer>
+  )
+}
+
 function NewComponent(){
   return (
     // <Fragment>
     //without fragments just <></> also works
     <> 
-      <header>
-        <img src="src/assets/react-logo.png" width="40px" alt="react-logo" />
-      </header>
-
-      <main>
-        <h1>Reasons I'm excited to learn React? </h1>
-        <ul>
-          <li>The most popular Javascript Library</li>
-          <li>I am more likely to get a job as a front end developer
-          if I know Reac</li>
-          <li>It is declarative and composable</li>
-          <li>It is cool and crazy</li>
-        </ul>
-    </main>
-
-    <footer>
-    © 2024 Zephyra Developed. All rights reserved. 
-    </footer>
+      <HeaderComponent/>
+      <MainComponent/>
+      <FooterComponent/>
     </>
     // </Fragment> 
   )
